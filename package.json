@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.4.16",
+    "gh-pages": "^3.2.3",
     "graphql": "^16.0.1",
     "next": "12.0.2",
     "react": "17.0.2",
