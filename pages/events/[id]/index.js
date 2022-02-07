@@ -2,7 +2,7 @@ import {useRouter} from 'next/router'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 import "tailwindcss/tailwind.css"
 import Head from 'next/head'
-import NextLink from "next/Link"
+import NextLink from "next/link"
 const event= ({events}) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const router = useRouter()
