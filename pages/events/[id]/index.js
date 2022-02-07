@@ -8,12 +8,18 @@ const event= ({events}) => {
     const router = useRouter()
     var {id} = router.query
     const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat ante ut suscipit scelerisque. Nam eget massa vel tortor eleifend posuere eget quis eros. Morbi ornare vitae nibh quis interdum. Nam lobortis molestie augue ac ornare. Donec rutrum augue eget purus pellentesque, et facilisis dui iaculis. Nulla pretium scelerisque porta. Cras pretium sem sed porttitor consequat. In condimentum sem id sem commodo aliquet.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque ac mauris a quam commodo sodales sit amet et ligula.Vestibulum vitae purus eu felis viverra pellentesque.Morbi vitae varius massa.Sed iaculis mi justo, id pretium nunc tincidunt quis.Donec neque magna, consequat ut egestas sit amet, fermentum eu dolor.Nam convallis lacus at mollis sagittis.Nullam varius erat in interdum ultrices.Nullam id condimentum orci.Integer placerat cursus diam in gravida.Sed blandit lacinia tristique.Nullam aliquam sapien eget sem sagittis, sit amet malesuada risus tristique.Quisque eget erat eros.Nulla vel ultrices turpis.Fusce sed urna justo."
-    const event = events[id]
+    for (let i=0; i<events.length; i++){
+        if (events[i].id == id){
+            const event=events[i].id
+            break
+        }
+    }
+
     return (
 
         <div>
             <Head>
-                <title>{event.theme}</title>
+                <title>{event.theme ? event.theme : "Theme Unavailable"}</title>
                 <meta name="description" content={event.name} />
             </Head>
             <div className="max-w-lg justify-center rounded overflow-hidden shadow-lg mt-24 ml-12 mr-12 h-4/5 w-5/5">
