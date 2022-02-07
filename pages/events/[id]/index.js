@@ -2,7 +2,7 @@ import {useRouter} from 'next/router'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 import "tailwindcss/tailwind.css"
 import Head from 'next/head'
-import Link from "next/Link"
+import NextLink from "next/Link"
 const event= ({events}) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const router = useRouter()
@@ -44,7 +44,7 @@ const event= ({events}) => {
                 <div className="px-6 pt-4 pb-2">
                     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Code: {event.code ? event.code : "No code"}</span>
                     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Location: {event.venue ? event.venue : "Unspecified Location"}</span>
-                    <span className="inline-block px-3 py-1 text-sm font-semibold text-blue-700 mr-2 mb-2"><Link href="/">Go back</Link></span>
+                    <span className="inline-block px-3 py-1 text-sm font-semibold text-blue-700 mr-2 mb-2"><NextLink href="/">Go back</NextLink></span>
                 </div>
             </div>
         </div>
