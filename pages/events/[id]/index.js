@@ -1,6 +1,5 @@
 import {useRouter} from 'next/router'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
-import "tailwindcss/tailwind.css"
 import Head from 'next/head'
 import NextLink from "next/link"
 const event= ({events}) => {
@@ -27,12 +26,12 @@ const event= ({events}) => {
                     <div className="font-bold text-xl mb-2">{event.theme ? event.theme : "Theme unavailble"}  <p className="text-sm text-gray-700  tracking-wide font-semibold mt-2">
                         Meeting Name: {event.name ? event.name: "No specified Meeting Name"}
                     </p></div>
-                    <p className="text-gray-700 text-bas w-5/5">
+                    <p className="text-gray-700 text-base w-full">
                         {event.description ? event.description : lorem}
                     </p>
                 </div>
                 <div className="px-6 pt-4 pb-2">
-                    <p className="text-sm text-gray-700 uppercase tracking-wide font-semibold mt-2">
+                    <p className="text-sm text-gray-700 uppercase tracking-wide font-semibold mt-2 ">
                     Start Date: {event.startDate ? event.startDate : "No specified Start Date"} - End Date: {event.endDate ? event.endDate : "No specified End Date"}
                     </p>
                 </div>

@@ -2,12 +2,10 @@ import {ApolloClient, InMemoryCache, gql } from '@apollo/client'
 import Head from 'next/head'
 import { useState } from 'react'
 import Event from "../components/Events"
-import "tailwindcss/tailwind.css"
 
 export default function Home(results) {
   const initialState = results
   const [events, setEvents] = useState(initialState.events)
-  console.log(initialState)
   return (
     <div className= "px-8 mt-10 flex justify-center">
       <Head>
